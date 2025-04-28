@@ -177,3 +177,6 @@ dataset/
 
 # Ignore raw_data directory and its contents
 /data/raw_data/
+/data/external_data/
+/data/processed_data/
+
