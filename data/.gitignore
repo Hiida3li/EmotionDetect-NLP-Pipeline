@@ -174,4 +174,4 @@ cython_debug/
 .pypirc
 .env
 dataset/
-data/
+data/raw_data/
