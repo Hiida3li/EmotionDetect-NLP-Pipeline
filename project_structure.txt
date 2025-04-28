@@ -1,0 +1,41 @@
+EmotionDetect-NLP-Pipeline/
+│
+├── 📁 data/                        # Raw and processed data
+│   ├── raw_data/                   # Raw text (tweets, dialogues, comments, etc.)
+│   ├── processed_data/             # Cleaned, tokenized, labeled datasets
+│   └── external/                   # Public datasets (e.g., GoEmotions, EmoBank)
+│
+├── 📁 notebooks/                   # Jupyter notebooks for exploration
+│   ├── 01_data_preprocessing.ipynb     # Cleaning, tokenization, label encoding
+│   ├── 02_emotion_classification.ipynb # Train classical models (SVM, NB)
+│   ├── 03_embeddings_analysis.ipynb    # Word2Vec, GloVe visualization
+│   └── 04_transformers_finetuning.ipynb # Fine-tune BERT/DistilBERT for emotions
+│
+├── 📁 emotiondetect/               # Main Python package / source code
+│   ├── __init__.py
+│   ├── preprocessing.py             # Cleaning, tokenization, data prep
+│   ├── classification.py            # ML models (Naive Bayes, Logistic Regression)
+│   ├── embeddings.py                # Word2Vec, GloVe, BERT vectorizers
+│   ├── transformers.py              # Fine-tuned transformers (BERT for emotions)
+│   ├── generation.py                # (Optional) Text generation (emotionally controlled generation)
+│   └── utils.py                     # Helpers (saving models, metrics, configs)
+│
+├── 📁 models/                      # Saved model files and checkpoints
+│   ├── tfidf_vectorizer.pkl
+│   ├── logistic_regression_model.pkl
+│   ├── naive_bayes_emotion_model.pkl
+│   └── bert_emotion_classifier/      # Directory for HuggingFace fine-tuned models
+│
+├── 📁 app/                         # Streamlit or Flask app for interactive UI
+│   ├── app.py                        # Main app (upload text, predict emotions)
+│   └── components/                   # UI components (file upload, charts, etc.)
+│
+├── 📁 visuals/                     # Visualizations
+│   ├── confusion_matrix.png          # Emotion prediction confusion matrix
+│   ├── embeddings_tsne.png           # Embeddings visualization
+│   └── classification_report.png     # Precision/Recall/F1 visualization
+│
+├── requirements.txt                # Python dependencies
+├── README.md                       # Project overview, how to run
+├── .gitignore                      # Ignore logs, data, models, checkpoints
+└── setup.py                        # (Optional) Package setup if published
